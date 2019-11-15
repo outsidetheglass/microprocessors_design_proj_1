@@ -10,8 +10,7 @@ _start:
 		
 DIVIDE: STMFD	R13!, {R11,R14} @ R11 is our original number
 NEXT:	ADD		R12, R12, #1		@ Add one to our divisor, result will be the original divided by nine is
-		SUB		R11, R11, #9		@ subtract 9 from R11 and put into R11
-		CMP		R11, #0				@ check if R11 is zero yet, loop will end when it is
+		SUBS		R11, R11, #9		@ subtract 9 from R11 and put into R11
 		BNE NEXT
 		
 .data
